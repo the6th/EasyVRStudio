@@ -24,7 +24,7 @@
 
 
 ### 自作のVRアプリに組み込む
-1. [Release](the6th/EasyVRStudio/releases)から最新のUnityPackage をダウンロードしてください。
+1. [Release](/the6th/EasyVRStudio/releases)から最新のUnityPackage をダウンロードしてください。
 2. Package を自作VRアプリに組み込み、シーンに
     ```
     Assets/EasyVRStudio/Prefabs/EasyVRStudio.prefab
