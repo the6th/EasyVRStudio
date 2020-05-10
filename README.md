@@ -2,7 +2,7 @@
 
 ## Overview
 
-自作のVRアプリに簡単に仮想カメラを配置し、OBS Studioおよび VaniiMenuと連動することで、ZoomやTeamsなどオンラインミーティングアプリに、VR空間から参加するための機能を提供します。
+自作のVRアプリに簡単に仮想カメラを配置し、[OBS Studio](https://obsproject.com/ja/download) および [VaniiMenu](https://sabowl.sakura.ne.jp/gpsnmeajp/unity/vaniimenu/) と連動することで、ZoomやTeamsなどオンラインミーティングアプリに、VR空間から参加するための機能を提供します。
 
 
 仮想カメラ機能を利用することでデスクトップ画面には、第三者視点のカメラをスイッチングして表示することができます。
@@ -10,6 +10,14 @@
 本パッケージが提供する機能は、仮想カメラの配置とキーボード操作によるカメラ切り替え機能のみで、オンラインミーティングに参加するには、別ソフトウェアである [OBS Studio](https://obsproject.com/ja/download) および [VaniiMenu](https://sabowl.sakura.ne.jp/gpsnmeajp/unity/vaniimenu/) と連携することを想定して作成されています。
 
 <img src="docs/images/EasyVRStudio.gif"/>
+
+----
+
+## Working environment
+* Unity 2019.2.x
+* SteamVR 推奨 
+  - 本パッケージはSteamVR以外でも動作しますが、連動して利用するVaniiMenu がSteamVRのオーバーレイ機能を利用しています。
+
 
 ----
 
