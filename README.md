@@ -72,6 +72,7 @@
 * OBS StudioおよびOBS-VirtualCam を利用することで、特定のウインドウをミーティングアプリのカメラ映像入力として利用することができます。
    - [OBS Studio 25.0.8](https://obsproject.com/ja/download)
    - [OBS-VirtualCam 2.0.4](https://obsproject.com/forum/resources/obs-virtualcam.539/)
+   - [OBSをバーチャルカメラとして出力してZoomやTeamsで映像ソースとして認識させる方法](https://level69.net/archives/26918)(参考)
 
 #### VaniiMenu
 
