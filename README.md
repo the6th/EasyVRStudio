@@ -1,4 +1,4 @@
-# EasyVRCamera
+# EasyVRStudio
 
 ## Overview
 
