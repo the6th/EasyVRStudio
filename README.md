@@ -2,11 +2,12 @@
 
 ## Overview
 
-自作のVRアプリに簡単に仮想カメラを配置し、ZoomやTeamsなどオンラインミーティングに、VR空間から参加するための機能を提供するアセットです。
+自作のVRアプリに簡単に仮想カメラを配置し、OBS Studioおよび VaniiMenuと連動することで、ZoomやTeamsなどオンラインミーティングアプリに、VR空間から参加するための機能を提供します。
+
 
 仮想カメラ機能を利用することでデスクトップ画面には、第三者視点のカメラをスイッチングして表示することができます。
 
-本パッケージが提供する機能は、仮想カメラの配置とキーボード操作によるカメラ切り替え機能のみで、オンラインミーティングに参加するには、別ソフトウェアである[OBS Studio](https://obsproject.com/ja/download)および[VaniiMenu](https://sabowl.sakura.ne.jp/gpsnmeajp/unity/vaniimenu/)と連携することを想定して作成されています。
+本パッケージが提供する機能は、仮想カメラの配置とキーボード操作によるカメラ切り替え機能のみで、オンラインミーティングに参加するには、別ソフトウェアである [OBS Studio](https://obsproject.com/ja/download) および [VaniiMenu](https://sabowl.sakura.ne.jp/gpsnmeajp/unity/vaniimenu/) と連携することを想定して作成されています。
 
 <img src="docs/images/EasyVRStudio.gif"/>
 
@@ -53,8 +54,38 @@
     keyCode: KeyCode.F1
     ),
     ```
-----
 
+---
+
+### Zoomなどミーティングアプリと連動する
+オンラインミーティングに参加するには、他のThirdParty アプリとの連動が必要です。
+
+#### OBS Studio
+* OBS StudioおよびOBS-VirtualCam を利用することで、特定のウインドウをミーティングアプリのカメラ映像入力として利用することができます。
+   - [OBS Studio 25.0.8](https://obsproject.com/ja/download)
+   - [OBS-VirtualCam 2.0.4](https://obsproject.com/forum/resources/obs-virtualcam.539/)
+
+#### VaniiMenu
+
+* [VaniiMenu](https://sabowl.sakura.ne.jp/gpsnmeajp/unity/vaniimenu/)
+
+VaniiMenuを利用することで自作VRアプリ空間上にデスクトップ画面を表示することができます。
+
+また、デスクトップ画面を表示しながらファンクションキーを送信する機能があります。
+
+
+
+この機能を利用することで
+
+* VR空間上でEasyVRCameraのカメラ視点の切り替え
+* 切り替え状態のモニタリング
+* オンラインミーティングアプリの画面表示
+
+を行うことができます。
+
+<img src="docs/images/VaniiMenu.gif"/>
+
+----
 
 ## License
 このリポジトリには以下のライブラリが含まれています。

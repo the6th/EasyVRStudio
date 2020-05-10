@@ -415,11 +415,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4507166588424605530, guid: 16b8f3f8891f32c4fa8d0d1e8e469290,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 056b1baecde55e246bbb573d506df3ad, type: 2}
     - target: {fileID: 6988079617247524208, guid: 16b8f3f8891f32c4fa8d0d1e8e469290,
         type: 3}
       propertyPath: m_Name
@@ -432,19 +427,14 @@ PrefabInstance:
       objectReference: {fileID: 1502038904}
     - target: {fileID: 6988079617247524212, guid: 16b8f3f8891f32c4fa8d0d1e8e469290,
         type: 3}
-      propertyPath: Hand_L
-      value: 
-      objectReference: {fileID: 1502038903}
-    - target: {fileID: 6988079617247524212, guid: 16b8f3f8891f32c4fa8d0d1e8e469290,
-        type: 3}
       propertyPath: Hand_R
       value: 
       objectReference: {fileID: 1502038902}
-    - target: {fileID: 6988079617247524213, guid: 16b8f3f8891f32c4fa8d0d1e8e469290,
+    - target: {fileID: 6988079617247524212, guid: 16b8f3f8891f32c4fa8d0d1e8e469290,
         type: 3}
-      propertyPath: m_ClearFlags
-      value: 1
-      objectReference: {fileID: 0}
+      propertyPath: Hand_L
+      value: 
+      objectReference: {fileID: 1502038903}
     - target: {fileID: 6988079617247524215, guid: 16b8f3f8891f32c4fa8d0d1e8e469290,
         type: 3}
       propertyPath: m_LocalPosition.x
