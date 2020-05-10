@@ -87,6 +87,21 @@ VaniiMenuを利用することで自作VRアプリ空間上にデスクトップ
 
 ----
 
+### Avatorを変更する
+通常の１人称視点のVRアプリでは、頭部など、手（コントローラ）以外の部分のアバターは作成していない事もあると思います。
+
+このパッケージでは簡易的な頭部しか提供していませんので、
+オリジナルのアバターを利用する場合は
+VRMとFinalIKを組み合わせるなどしてご自身で用意してください。
+
+* [VRM](https://vrm.dev/)
+* [Final IK](https://assetstore.unity.com/packages/tools/animation/final-ik-14290?locale=ja-JP)
+* [VRoid StudioのVRMモデルを使ってノンコーディングでVTuberのように動かす](https://techblog.forgevision.com/entry/2018/08/29/155803)(参考)
+
+
+
+----
+
 ## License
 このリポジトリには以下のライブラリが含まれています。
 
