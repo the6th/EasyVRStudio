@@ -17,7 +17,7 @@
 
 ## Working environment
 * Unity 2019.2.x
-* Windows Standalonne
+* Windows Standalone
 * SteamVR 推奨 
   - 本パッケージ自体はWindows上でSteamVR以外でも動作しますが、連動して利用するVaniiMenu がSteamVRのオーバーレイ機能を利用しています。
 
