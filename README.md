@@ -7,6 +7,8 @@
 
 仮想カメラ機能を利用することでデスクトップ画面には、第三者視点のカメラをスイッチングして表示することができます。
 
+また、FirstPesonViewそのままでは、頭部の追随による画面ブレが激しいため、それを低減するスタビライザとしても利用できます。
+
 本パッケージが提供する機能は、仮想カメラの配置とキーボード操作によるカメラ切り替え機能のみで、オンラインミーティングに参加するには、別ソフトウェアである [OBS Studio](https://obsproject.com/ja/download) および [VaNiiMenu](https://sabowl.sakura.ne.jp/gpsnmeajp/unity/vaniimenu/) と連携することを想定して作成されています。
 
 <img src="docs/images/EasyVRStudio.gif"/>
@@ -15,9 +17,9 @@
 
 ## Working environment
 * Unity 2019.2.x
+* Windows Standalone
 * SteamVR 推奨 
-  - 本パッケージはSteamVR以外でも動作しますが、連動して利用するVaNiiMenu がSteamVRのオーバーレイ機能を利用しています。
-
+  - 本パッケージ自体はWindows上でSteamVR以外でも動作しますが、連動して利用するVaNiiMenu がSteamVRのオーバーレイ機能を利用しています。
 
 ----
 
@@ -47,21 +49,32 @@
 （デスクトップアプリの画面を確認してください）
 
 4. 仮想カメラの設定は
-    ```
-    Assets/EasyVRStudio/Scripts/Config.cs
-    ```
+    
+    * [Assets/EasyVRStudio/Scripts/Config.cs](Assets/EasyVRStudio/Scripts/Config.cs)
+   
     で定義されています。このファイルを変更することで
     仮想カメラの位置やトリガーキーを切り替えることができます。
 
     ```
     new DisplayCamera(
-    name: "vCenter",
-    parent: CameraParent.HEAD,
-    position: Vector3.zero,
-    eulerAngles: new Vector3(10f,0,0),
-    keyCode: KeyCode.F1
+      name: "vCenter",            //カメラ名称（任意）
+      parent: CameraParent.HEAD,  //親オブジェクト(CameraParent.HEAD/CameraParent.HAND_L/CameraParent.HAND_R)
+      position: Vector3.zero,     //親オブジェクトからのローカル座標
+      eulerAngles: new Vector3(10f,0,0),//親オブジェクトからのローカルオイラー角
+      keyCode: KeyCode.F1         //切り替えキー
     ),
     ```
+初期設定では以下の仮想カメラが切り替え可能となっています。
+
+|キー操作|仮想カメラ|
+|---|---|
+|F1|FirstPersonView ブレ補正付き|
+|F2|対面View|
+|F3|天井からの見降ろしView（手元の作業を見せたい場合を想定）|
+|F4|右コントローラに追随するハンドカメラ風|
+|F5|左コントローラに追随するハンドカメラ風|
+|F6|機能無効/パススルー（FirstPersonViewそのまま）|
+
 
 ---
 
@@ -72,6 +85,7 @@
 * OBS StudioおよびOBS-VirtualCam を利用することで、特定のウインドウをミーティングアプリのカメラ映像入力として利用することができます。
    - [OBS Studio 25.0.8](https://obsproject.com/ja/download)
    - [OBS-VirtualCam 2.0.4](https://obsproject.com/forum/resources/obs-virtualcam.539/)
+   - [OBSをバーチャルカメラとして出力してZoomやTeamsで映像ソースとして認識させる方法](https://level69.net/archives/26918)(参考)
 
 #### VaNiiMenu
 
@@ -85,7 +99,7 @@ VaNiiMenuを利用することで自作VRアプリ空間上にデスクトップ
 
 この機能を利用することで
 
-* VR空間上でEasyVRCameraのカメラ視点の切り替え
+* VR空間上でEasyVRStudioのカメラ視点の切り替え
 * 切り替え状態のモニタリング
 * オンラインミーティングアプリの画面表示
 
